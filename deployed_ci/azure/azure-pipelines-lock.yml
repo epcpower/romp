@@ -10,8 +10,6 @@ variables:
 jobs:
   - job: generate_matrix
     displayName: Generate matrix
-    pool:
-      vmImage: 'ubuntu-latest'
     steps:
       - bash: |
           python src/romp/_matrix.py --environments ${ROMP_ENVIRONMENTS}
