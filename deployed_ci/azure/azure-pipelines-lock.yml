@@ -45,8 +45,7 @@ jobs:
       - generate_matrix
       - get_input_archive
     pool:
-      #vmImage: $[ variables.vmImage ]
-      vmImage: 'ubuntu-latest'
+      vmImage: $[ variables.vmImage ]
     strategy:
       matrix: $[ dependencies.generate_matrix.outputs['generate_matrix.JobsToRun'] ]
     steps:
